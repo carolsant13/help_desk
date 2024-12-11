@@ -1,8 +1,5 @@
 <?php 
   session_start();
-  echo $_SESSION['x'];
-
-  $_SESSION['y']= 1000;
 ?>
 
 <html>
@@ -54,6 +51,16 @@
                 </div>
 
                 <?php } ?>
+
+                <?php
+                if(isset($_GET['login']) && $_GET['login'] == 'erro2'){ ?>
+
+                <div class="text-danger">
+                  Faça o login antes de acessar as paginas protegidas!
+                </div>
+
+                <?php } ?>
+
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
             </div>

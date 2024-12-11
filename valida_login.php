@@ -2,11 +2,6 @@
 
     session_start();
 
-    $_SESSION['x']='valor pipip';
-    print_r(($_SESSION));
-    echo'<hr />';
-    echo $_SESSION['y'] . '<br />';
-
 //variavel de autenticação
 $ususario_autenticado= false;
 
@@ -25,7 +20,9 @@ foreach($usuarios_app as $user){
 
 if($ususario_autenticado){
     echo 'usuario autenticado';
+    $_SESSION['autenticado']= "SIM";
 }else{
+    $_SESSION['autenticado']= "NÂO";
     header('Location: index.php?login=erro');
 }
 /*
